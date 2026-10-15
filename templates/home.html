@@ -1,0 +1,14 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+{% for post in post_list %}
+<div class="post-entry">
+  <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2> <!-- new -->
+  <p>Author: {{ post.author }}</p>
+  <p>{{ post.body }}</p>
+</div>
+{% empty %}
+<p>No posts yet. Add some in the <a href="{% url 'admin:index' %}">admin</a>.</p>
+{% endfor %}
+{% endblock content %}
