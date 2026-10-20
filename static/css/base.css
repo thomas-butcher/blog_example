@@ -24,6 +24,15 @@ header h1 a {
   padding-top: 2rem;
 }
 
+.nav-right a,
+.nav-right form {
+  margin-left: 1rem;
+}
+
+.nav-right button {
+  font: inherit;
+}
+
 .post-entry {
   margin-bottom: 2rem;
 }
